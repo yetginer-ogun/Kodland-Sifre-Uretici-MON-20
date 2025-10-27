@@ -27,3 +27,9 @@ def test_password_uniqueness():
     password2 = generate_password(20)
     assert password1 != password2
 
+
+def test_password_uzunluk():
+    length = -11
+    password = generate_password(length)
+    assert len(password) == length
+
