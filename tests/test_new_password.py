@@ -8,14 +8,42 @@ def test_password_characters():
     for char in password:
         assert char in valid_characters
 
-"""
-Aşağıda önerilenlerden birini kullanarak başka bir test yazın. Alternatif olarak, kendi testinizi de oluşturabilirsiniz!
-Daha fazla test yazabilirseniz harika olur!
-
-1. Şifrenin uzunluğunun belirtilen uzunlukla eşleşip eşleşmediğini test edin  
-2. Arka arkaya oluşturulan iki şifrenin farklı olup olmadığını test edin 
-"""
+def test_password_length():
+    length = 100
+    password = generate_password(length)
+    assert len(password) == length
 
 
+def test_password_twice():
+    length = 13
+    password1 = generate_password(length)
+    password2 = generate_password(length)
+    assert password1 != password2
 
-print("Hello world")
+
+
+def test_password_too_big():
+    length = 200000
+    password = generate_password(length)
+    assert len(password) == length
+
+
+def test_password_negative_length():
+    length = -20
+    password = generate_password(length)
+    assert password == "Uzunluk sıfırdan büyük olmalıdır"
+
+
+def test_password_string_length():
+    length = "asd"
+    password = generate_password(length)
+    assert password == "Sayısal bir değer girin"
+
+def test_password_include_space():
+    length=100000
+    password = generate_password(length)
+    if " " in password:
+        sonuc = "bulundu"
+    else:
+        sonuc = "bulunmadı" 
+    assert sonuc == "bulunmadı"
