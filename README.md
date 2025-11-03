@@ -1,29 +1,23 @@
-# Rastgele Şifre Üretici
+# 🔑 Rastgele Şifre Üretici
 
-Bu uygulama, belirlenen karakter sayısına göre rastgele şifreler üretmek için tasarlanmıştır. Şifreler büyük ve küçük harfler, sayılar ve özel karakterler içerebilir.
+Bu uygulama, kullanıcı tarafından belirlenen kriterlere (uzunluk ve karakter tipleri) göre güçlü, rastgele şifreler üretmek için tasarlanmıştır. Üretilen şifreler, güvenliği artırmak amacıyla büyük ve küçük harfler, rakamlar ve özel karakterlerin bir kombinasyonunu içerir.
 
-## Özellikler
+## ✨ Özellikler
 
-- Belirtilen uzunlukta rastgele şifre üretimi
-- Şifre oluştururken harfler, sayılar ve özel karakterler kullanılır
-- Basit ve anlaşılır bir konsol uygulamasıdır
+* **Ayarlanabilir Uzunluk:** Kullanıcının istediği uzunlukta şifre üretimi.
+* **Kapsamlı Karakter Seti:** Şifre oluşturma sürecinde harfler, sayılar ve özel karakterler kullanılır.
+* **Kolay Kullanım:** Basit ve anlaşılır bir konsol uygulaması arayüzüne sahiptir.
+* **Gelişmiş Test Kapsamı:** Şifre güvenilirliğini doğrulamak için "word" (kelime) değişkeninin şifrede varlığını kontrol eden ek testler içerir.
 
-## Programı Çalıştırma
+## 🚀 Başlarken
 
-Programı çalıştırmak için bilgisayarınızda Python 3.6 veya daha üst bir sürümün kurulu olduğundan emin olun.
+### Gereksinimler
 
-## Testleri Çalıştırma
+Programı çalıştırmak için bilgisayarınızda **Python 3.6** veya daha üst bir sürümün kurulu olduğundan emin olun.
 
-Burada yazılmış testler pytest kütüphanesini kullanır. Yüklemek için şu komutu yazın:
+### Programı Çalıştırma
+
+Proje dizininde (root directory) iken aşağıdaki komutu kullanarak uygulamayı başlatabilirsiniz:
+
 ```bash
-pip install pytest
-```
-
-Daha sonra testleri proje dizininin kök klasöründen şu komutla çalıştırabilirsiniz:
-```bash
-pytest
-```
-
-## ✍️ Yazar
-
-Kodland
+python new_password.py
