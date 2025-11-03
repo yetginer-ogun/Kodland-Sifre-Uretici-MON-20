@@ -16,3 +16,23 @@ Daha fazla test yazabilirseniz harika olur!
 2. Arka arkaya oluşturulan iki şifrenin farklı olup olmadığını test edin 
 """ 
 print("sellam")
+
+
+def test_password_length():
+    """Şifrenin uzunluğu belirtilen uzunlukla eşleşiyor mu test eder"""
+    length = 12
+    password = generate_password(length)
+    assert len(password) == length
+
+def test_password_uniqueness():
+    """Arka arkaya oluşturulan iki şifrenin farklı olup olmadığını test eder"""
+    password1 = generate_password(12)
+    password2 = generate_password(12)
+    assert password1 != password2
+
+def test_password_contains_word():
+    """Şifrede belirli bir kelimenin geçtiğini test eder"""
+    word = "TaCo"
+    password = generate_password(15, word=word)
+    assert word in password, f"'{word}' şifre içinde bulunamadı!"
+
